@@ -227,10 +227,29 @@ def extrair_dados_pdf(caminho_arquivo: str) -> str:
                 imagem = Image.open(io.BytesIO(pix.tobytes("png")))
                 texto_completo += pytesseract.image_to_string(imagem, lang='por') + "\n"
         
-        prompt_sistema = "Você é um assistente especialista em análise de documentos fiscais. Retorne os dados estritamente em formato JSON."
-        prompt_usuario = f"Analise o texto a seguir extraído de um PDF e extraia os campos: 'cnpj_emitente', 'valor_total', 'data_emissao', 'chave_acesso' (se houver). Texto: --- {texto_completo} ---"
+        prompt_sistema = """
+        Você é um assistente especialista em análise de documentos fiscais.
+        Sua tarefa é extrair informações de um texto obtido por OCR de um documento fiscal em PDF.
+        Retorne os dados estritamente no formato JSON.
+        O JSON deve conter os campos do cabeçalho e uma lista de 'itens'.
+        Para cada item, extraia 'descricao', 'quantidade', 'valor_unitario' e 'valor_total_item'.
+        Se um campo não for encontrado, retorne null para ele.
+        """
+        prompt_usuario = f"""
+        Analise o texto a seguir e extraia os seguintes campos:
+        - 'cnpj_emitente'
+        - 'valor_total'
+        - 'data_emissao'
+        - 'chave_acesso' (se houver)
+        - 'itens' (uma lista de todos os produtos/serviços)
+
+        Texto extraído do PDF:
+        ---
+        {texto_completo}
+        ---
+        """
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo", # MUDANÇA: Usando um modelo mais poderoso para extração de PDF.
             messages=[{"role": "system", "content": prompt_sistema}, {"role": "user", "content": prompt_usuario}],
             response_format={"type": "json_object"}
         )
@@ -262,8 +281,11 @@ def auditar_dados_fiscais(dados_extraidos_json: str) -> str:
         # 1. Validação da soma dos itens vs. valor total
         itens = dados.get("itens", [])
         if itens and isinstance(itens, list):
-            soma_itens = sum(item.get("valor_total_item", 0) for item in itens)
-            valor_total_nota = dados.get("valor_total", 0)
+            # CORREÇÃO: Trata valores 'None' como 0 para evitar erros de tipo na soma.
+            # O método .get() não substitui 'None', então precisamos de uma verificação explícita.
+            # CORREÇÃO 2: Converte explicitamente para float para evitar erros de tipo com strings (ex: "12.34").
+            soma_itens = sum(float(item.get("valor_total_item") or 0) for item in itens)
+            valor_total_nota = float(dados.get("valor_total") or 0)
             
             # Usamos uma pequena tolerância para comparações de ponto flutuante
             if abs(soma_itens - valor_total_nota) > 0.01:
@@ -274,6 +296,19 @@ def auditar_dados_fiscais(dados_extraidos_json: str) -> str:
                 alertas.append(alerta)
             else:
                 validacoes_ok.append(f"Soma dos itens (R$ {soma_itens:.2f}) validada com sucesso contra o valor total da nota.")
+
+        # 2. Validação do CNPJ do emitente
+        cnpj_emitente = dados.get("cnpj_emitente")
+        if cnpj_emitente:
+            if not validar_cnpj_digitos(cnpj_emitente):
+                alerta = {
+                    "tipo": "CNPJ_INVALIDO",
+                    "detalhes": f"O CNPJ do emitente '{cnpj_emitente}' possui dígitos verificadores inválidos."
+                }
+                alertas.append(alerta)
+            else:
+                validacoes_ok.append(f"CNPJ do emitente '{cnpj_emitente}' validado com sucesso (dígitos verificadores).")
+
 
         return json.dumps({
             "status": "OK",
@@ -344,10 +379,9 @@ def classificar_documento(dados_auditados_json: str) -> str:
         classificacao = json.loads(response.choices[0].message.content)
         
         # Adiciona a classificação aos dados existentes
-        dados['classificacao'] = classificacao
+        payload['dados_fiscais']['classificacao'] = classificacao
         
         # DEVOLVE A ESTRUTURA COMPLETA E CONSISTENTE
-        payload['dados_fiscais'] = dados
         return json.dumps(payload, indent=2)
 
     except Exception as e:
@@ -364,17 +398,22 @@ def salvar_dados_no_banco(dados_auditados_json: str) -> str:
     print(f"\n>>> EXECUTANDO FERRAMENTA: salvar_dados_no_banco")
     print(f"DEBUG: Input recebido: {dados_auditados_json}")
     try:
-        payload = json.loads(dados_auditados_json)
+        # TENTATIVA 1: Tenta analisar o JSON como está.
+        try:
+            payload = json.loads(dados_auditados_json)
+        except json.JSONDecodeError:
+            # TENTATIVA 2 (PLANO B): Se falhar, o LLM pode ter concatenado JSONs.
+            # Vamos extrair o último objeto JSON válido da string.
+            # Isso é útil se o agente passar algo como "{...}{...}"
+            last_brace_index = dados_auditados_json.rfind('{')
+            json_string_corrigido = dados_auditados_json[last_brace_index:]
+            payload = json.loads(json_string_corrigido)
 
-        # LÓGICA DE DEPURAÇÃO: Encontra os dados fiscais.
+        # LÓGICA DE BUSCA: Encontra o dicionário com os dados fiscais, não importa a profundidade.
         info = payload.get('dados_fiscais', payload)
 
         if not isinstance(info, dict) or not any(key in info for key in ['chave_acesso', 'cnpj_emitente', 'valor_total']):
-            return json.dumps({
-                "status": "FALHA",
-                "detalhes": "Dados fiscais para salvar não encontrados ou inválidos no payload recebido.",
-                "dados_recebidos": dados_auditados_json
-            })
+            raise ValueError("Dados fiscais para salvar não encontrados ou inválidos no payload recebido.")
 
         conn = sqlite3.connect(DB_FILE)
         cursor = conn.cursor()
@@ -401,14 +440,16 @@ def salvar_dados_no_banco(dados_auditados_json: str) -> str:
         })
         
     except sqlite3.IntegrityError as e:
+        chave = info.get('chave_acesso', 'desconhecida')
         return json.dumps({
             "status": "AVISO", 
-            "detalhes": f"Conflito no banco de dados: {str(e)}"
+            "detalhes": f"Documento com chave {chave} já existe no banco de dados. A operação foi ignorada."
         })
     except Exception as e:
         return json.dumps({
             "status": "ERRO", 
-            "detalhes": f"Falha ao salvar no banco de dados: {str(e)}"
+            "detalhes": f"Falha ao salvar no banco de dados: {str(e)}",
+            "dados_recebidos": dados_auditados_json
         })
 @tool
 def ler_registros_do_banco(query: str = "SELECT * FROM documentos_fiscais") -> str:
