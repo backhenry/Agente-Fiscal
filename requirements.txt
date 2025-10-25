@@ -1,0 +1,19 @@
+# LangChain e dependências
+langchain==0.2.16
+langchain-openai==0.1.23
+langchain-core==0.2.38
+langchain-community==0.2.16
+langchain-text-splitters==0.2.4
+langsmith==0.1.129
+openai==1.51.0
+
+# Dependências de compatibilidade
+cachetools<6.0,>=2.0.0
+protobuf<5,>=4.25.3
+
+# Outras dependências
+streamlit
+python-dotenv
+pymupdf==1.23.8
+lxml
+pandas
