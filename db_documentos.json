@@ -1,0 +1,921 @@
+[
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "cnpj_emitente": "22.646.741/0001-87",
+        "destinatario_cpf": "447.691.828-05",
+        "numero": "75763",
+        "data_emissao": "10/10/2024",
+        "valor_total_nota": "2081.27",
+        "discriminacao_servicos": "9.01 - Hospedagem de qualquer natureza em hotéis, apart - service condominiais, flat, apart - hotéis, hotéis residência, residence - service, suite service, hotelaria marítima, motéis, pensões e congêneres; ocupação por temporada com fornecimento de serviço.",
+        "formato": "ocr_ia",
+        "tipo_documento": "NFS-e"
+    },
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "cnpj_emitente": "22.646.741/0001-87",
+        "destinatario_cpf": "447.691.828-05",
+        "numero": "75763",
+        "data_emissao": "10/10/2024",
+        "valor_total_nota": "2081.27",
+        "discriminacao_servicos": "9.01 - Hospedagem de qualquer natureza em hotéis, apart - service condominiais, flat, apart - hotéis, hotéis residência, residence - service, suite service, hotelaria marítima, motéis, pensões e congêneres; ocupação por temporada com fornecimento de serviço.",
+        "formato": "ocr_ia",
+        "tipo_documento": "NFS-e"
+    },
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "cnpj_emitente": "22.646.741/0001-87",
+        "destinatario_cpf": "447.691.828-05",
+        "numero": "75763",
+        "data_emissao": "10/10/2024",
+        "valor_total_nota": "2081.27",
+        "discriminacao_servicos": "9.01 - Hospedagem de qualquer natureza em hotéis, apart - service condominiais, flat, apart - hotéis, hotéis residência, residence - service, suite service, hotelaria marítima, motéis, pensões e congêneres; ocupação por temporada com fornecimento de serviço.",
+        "formato": "ocr_ia",
+        "tipo_documento": "NFS-e"
+    },
+    {
+        "status_auditoria": "error",
+        "erros_auditoria": [
+            "CNPJ do emitente '00111222000199' é inválido.",
+            "CNPJ do destinatário '99888777000111' é inválido.",
+            "A soma dos itens (14205.00) difere do valor total da nota (14000.00)."
+        ],
+        "avisos_auditoria": [
+            "Tipo de documento 'NFE' pode não ser um tipo padrão.",
+            "Item 1 (001) - NCM '84713019' não consta na lista.",
+            "Item 2 (002) - NCM '85285200' não consta na lista.",
+            "Item 3 (003) - NCM '84733090' não consta na lista."
+        ],
+        "tipo_documento": "NFE",
+        "numero": "15048",
+        "serie": "1",
+        "data_emissao": "2025-10-28T10:30:00-03:00",
+        "emitente_razao_social": "EMPRESA EMITENTE TESTE LTDA",
+        "emitente_cnpj": "00111222000199",
+        "destinatario_razao_social": "EMPRESA DESTINATARIO TESTE S/A",
+        "destinatario_cnpj_cpf": "99888777000111",
+        "valor_total_nota": "14000.00",
+        "itens": [
+            {
+                "codigo": "001",
+                "descricao": "NOTEBOOK MODELO PRO",
+                "ncm": "84713019",
+                "cfop": "5102",
+                "quantidade": "2.0000",
+                "valor_unitario": "4500.00",
+                "valor_total": "9000.00",
+                "imposto": {
+                    "ICMS": {
+                        "ICMS00": {
+                            "orig": "0",
+                            "CST": "00",
+                            "modBC": "3",
+                            "vBC": "9000.00",
+                            "pICMS": "18.00",
+                            "vICMS": "1620.00"
+                        }
+                    }
+                }
+            },
+            {
+                "codigo": "002",
+                "descricao": "MONITOR 24 POLEGADAS",
+                "ncm": "85285200",
+                "cfop": "5102",
+                "quantidade": "5.0000",
+                "valor_unitario": "800.00",
+                "valor_total": "4000.00",
+                "imposto": {
+                    "ICMS": {
+                        "ICMS00": {
+                            "orig": "0",
+                            "CST": "00",
+                            "modBC": "3",
+                            "vBC": "4000.00",
+                            "pICMS": "18.00",
+                            "vICMS": "720.00"
+                        }
+                    }
+                }
+            },
+            {
+                "codigo": "003",
+                "descricao": "SUPORTE NOTEBOOK",
+                "ncm": "84733090",
+                "cfop": "5102",
+                "quantidade": "10.0000",
+                "valor_unitario": "120.50",
+                "valor_total": "1205.00",
+                "imposto": {
+                    "ICMS": {
+                        "ICMS00": {
+                            "orig": "0",
+                            "CST": "00",
+                            "modBC": "3",
+                            "vBC": "1205.00",
+                            "pICMS": "18.00",
+                            "vICMS": "216.90"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "status_auditoria": "warning",
+        "erros_auditoria": [],
+        "avisos_auditoria": [
+            "CPF/CNPJ do destinatário (tomador) não informado."
+        ],
+        "cnpj_emitente": "47.380.703/0001-56",
+        "destinatario_cpf": "",
+        "destinatario_cnpj": "",
+        "numero": "21955",
+        "data_emissao": "19/09/25 16:17:30",
+        "valor_total_nota": "13.41",
+        "discriminacao_servicos": "Vanilla Latte",
+        "formato": "ocr_ia",
+        "tipo_documento": "NFS-e"
+    },
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "numero": "75763",
+        "data_emissao": "10/10/2024",
+        "valor_total_nota": "2081.27",
+        "discriminacao_servicos": "9.01 - Hospedagem de qualquer natureza em hotéis, apart - service condominiais, flat, apart - hotéis, hotéis residência, residence - service, suite service, hotelaria marítima, motéis, pensões e congêneres; ocupação por temporada com fornecimento de serviço.",
+        "emitente_cnpj": "22.646.741/0001-87",
+        "destinatario_cnpj_cpf": "447.691.828-05",
+        "formato": "ocr_ia",
+        "tipo_documento": "NFS-e"
+    },
+    {
+        "status_auditoria": "warning",
+        "erros_auditoria": [],
+        "avisos_auditoria": [
+            "CPF/CNPJ do destinatário (tomador) não informado."
+        ],
+        "destinatario_cpf": null,
+        "numero": "21955",
+        "data_emissao": "19/09/25 16:17:30",
+        "valor_total_nota": "13.41",
+        "discriminacao_servicos": "Vanilla Latte",
+        "emitente_cnpj": "47.380.703/0001-56",
+        "destinatario_cnpj_cpf": null,
+        "formato": "ocr_ia",
+        "tipo_documento": "NFS-e"
+    },
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "numero": "75763",
+        "data_emissao": "10/10/2024",
+        "valor_total_nota": "2081.27",
+        "discriminacao_servicos": "9.01 - Hospedagem de qualquer natureza em hotéis, apart - service condominiais, flat, apart - hotéis, hotéis residência, residence - service, suite service, hotelaria marítima, motéis, pensões e congêneres; ocupação por temporada com fornecimento de serviço.",
+        "emitente_cnpj": "22.646.741/0001-87",
+        "destinatario_cnpj_cpf": "447.691.828-05",
+        "formato": "ocr_ia",
+        "tipo_documento": "NFS-e"
+    },
+    {
+        "status_auditoria": "warning",
+        "erros_auditoria": [],
+        "avisos_auditoria": [
+            "Tipo de documento 'NFE' pode não ser um tipo padrão."
+        ],
+        "tipo_documento": "NFE",
+        "numero": "161841",
+        "serie": "26",
+        "data_emissao": "2025-07-02T18:05:46-03:00",
+        "emitente_razao_social": "TELEFONICA BRASIL S/A",
+        "emitente_cnpj": "02558157046154",
+        "destinatario_razao_social": "HENRIQUE BAPTISTA MARTINS",
+        "destinatario_cnpj_cpf": "44769182805",
+        "valor_total_nota": "2399.00",
+        "itens": [
+            {
+                "codigo": "000000000022022058",
+                "descricao": "APPLE AIRPODS PRO2 C/ESTJ MGSAFE USBC BR",
+                "ncm": "85183000",
+                "cfop": "6102",
+                "quantidade": "1.0000",
+                "valor_unitario": "2399.0000000000",
+                "valor_total": "2399.00",
+                "imposto": {
+                    "vTotTrib": "221.90",
+                    "ICMS": {
+                        "ICMS40": {
+                            "orig": "2",
+                            "CST": "41"
+                        }
+                    },
+                    "IPI": {
+                        "cEnq": "999",
+                        "IPINT": {
+                            "CST": "01"
+                        }
+                    },
+                    "PIS": {
+                        "PISAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pPIS": "1.6500",
+                            "vPIS": "39.58"
+                        }
+                    },
+                    "COFINS": {
+                        "COFINSAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pCOFINS": "7.6000",
+                            "vCOFINS": "182.32"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "numero": "75763",
+        "data_emissao": "10/10/2024",
+        "valor_total_nota": "2081.27",
+        "discriminacao_servicos": "9.01 - Hospedagem de qualquer natureza em hotéis, apart - service condominiais, flat, apart - hotéis, hotéis residência, residence - service, suite service, hotelaria marítima, motéis, pensões e congêneres; ocupação por temporada com fornecimento de serviço.",
+        "emitente_cnpj": "22.646.741/0001-87",
+        "destinatario_cnpj_cpf": "447.691.828-05",
+        "formato": "ocr_ia",
+        "tipo_documento": "NFS-e"
+    },
+    {
+        "status_auditoria": "warning",
+        "erros_auditoria": [],
+        "avisos_auditoria": [
+            "CPF/CNPJ do destinatário (tomador) não informado."
+        ],
+        "destinatario_cpf": null,
+        "numero": "21955",
+        "data_emissao": "19/09/25 16:17:30",
+        "valor_total_nota": "13.41",
+        "discriminacao_servicos": "Vanilla Latte",
+        "emitente_cnpj": "47.380.703/0001-56",
+        "destinatario_cnpj_cpf": null,
+        "formato": "ocr_ia",
+        "tipo_documento": "NFS-e"
+    },
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "numero": "75763",
+        "data_emissao": "10/10/2024",
+        "valor_total_nota": "2081.27",
+        "discriminacao_servicos": "9.01 - Hospedagem de qualquer natureza em hotéis, apart - service condominiais, flat, apart - hotéis, hotéis residência, residence - service, suite service, hotelaria marítima, motéis, pensões e congêneres; ocupação por temporada com fornecimento de serviço.",
+        "emitente_cnpj": "22.646.741/0001-87",
+        "destinatario_cnpj_cpf": "447.691.828-05",
+        "formato": "ocr_ia",
+        "tipo_documento": "NFS-e"
+    },
+    {
+        "status_auditoria": "error",
+        "erros_auditoria": [
+            "Item 1 (000000000022022058) - NCM '85183000' é inválido ou não foi encontrado na Tabela TIPI."
+        ],
+        "avisos_auditoria": [
+            "Tipo de documento 'NFE' pode não ser um tipo padrão."
+        ],
+        "tipo_documento": "NFE",
+        "numero": "161841",
+        "serie": "26",
+        "data_emissao": "2025-07-02T18:05:46-03:00",
+        "emitente_razao_social": "TELEFONICA BRASIL S/A",
+        "emitente_cnpj": "02558157046154",
+        "destinatario_razao_social": "HENRIQUE BAPTISTA MARTINS",
+        "destinatario_cnpj_cpf": "44769182805",
+        "valor_total_nota": "2399.00",
+        "itens": [
+            {
+                "codigo": "000000000022022058",
+                "descricao": "APPLE AIRPODS PRO2 C/ESTJ MGSAFE USBC BR",
+                "ncm": "85183000",
+                "cfop": "6102",
+                "quantidade": "1.0000",
+                "valor_unitario": "2399.0000000000",
+                "valor_total": "2399.00",
+                "imposto": {
+                    "vTotTrib": "221.90",
+                    "ICMS": {
+                        "ICMS40": {
+                            "orig": "2",
+                            "CST": "41"
+                        }
+                    },
+                    "IPI": {
+                        "cEnq": "999",
+                        "IPINT": {
+                            "CST": "01"
+                        }
+                    },
+                    "PIS": {
+                        "PISAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pPIS": "1.6500",
+                            "vPIS": "39.58"
+                        }
+                    },
+                    "COFINS": {
+                        "COFINSAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pCOFINS": "7.6000",
+                            "vCOFINS": "182.32"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "status_auditoria": "warning",
+        "erros_auditoria": [],
+        "avisos_auditoria": [
+            "Tipo de documento 'NFE' pode não ser um tipo padrão."
+        ],
+        "tipo_documento": "NFE",
+        "numero": "161841",
+        "serie": "26",
+        "data_emissao": "2025-07-02T18:05:46-03:00",
+        "emitente_razao_social": "TELEFONICA BRASIL S/A",
+        "emitente_cnpj": "02558157046154",
+        "destinatario_razao_social": "HENRIQUE BAPTISTA MARTINS",
+        "destinatario_cnpj_cpf": "44769182805",
+        "valor_total_nota": "2399.00",
+        "itens": [
+            {
+                "codigo": "000000000022022058",
+                "descricao": "APPLE AIRPODS PRO2 C/ESTJ MGSAFE USBC BR",
+                "ncm": "85183000",
+                "cfop": "6102",
+                "quantidade": "1.0000",
+                "valor_unitario": "2399.0000000000",
+                "valor_total": "2399.00",
+                "imposto": {
+                    "vTotTrib": "221.90",
+                    "ICMS": {
+                        "ICMS40": {
+                            "orig": "2",
+                            "CST": "41"
+                        }
+                    },
+                    "IPI": {
+                        "cEnq": "999",
+                        "IPINT": {
+                            "CST": "01"
+                        }
+                    },
+                    "PIS": {
+                        "PISAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pPIS": "1.6500",
+                            "vPIS": "39.58"
+                        }
+                    },
+                    "COFINS": {
+                        "COFINSAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pCOFINS": "7.6000",
+                            "vCOFINS": "182.32"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "status_auditoria": "warning",
+        "erros_auditoria": [],
+        "avisos_auditoria": [
+            "Tipo de documento 'NFE' pode não ser um tipo padrão."
+        ],
+        "conclusao_analise": "Documento '161841' auditado. Status: WARNING. | AVISOS: Tipo de documento 'NFE' pode não ser um tipo padrão.",
+        "tipo_documento": "NFE",
+        "numero": "161841",
+        "serie": "26",
+        "data_emissao": "2025-07-02T18:05:46-03:00",
+        "emitente_razao_social": "TELEFONICA BRASIL S/A",
+        "emitente_cnpj": "02558157046154",
+        "destinatario_razao_social": "HENRIQUE BAPTISTA MARTINS",
+        "destinatario_cnpj_cpf": "44769182805",
+        "valor_total_nota": "2399.00",
+        "itens": [
+            {
+                "codigo": "000000000022022058",
+                "descricao": "APPLE AIRPODS PRO2 C/ESTJ MGSAFE USBC BR",
+                "ncm": "85183000",
+                "cfop": "6102",
+                "quantidade": "1.0000",
+                "valor_unitario": "2399.0000000000",
+                "valor_total": "2399.00",
+                "imposto": {
+                    "vTotTrib": "221.90",
+                    "ICMS": {
+                        "ICMS40": {
+                            "orig": "2",
+                            "CST": "41"
+                        }
+                    },
+                    "IPI": {
+                        "cEnq": "999",
+                        "IPINT": {
+                            "CST": "01"
+                        }
+                    },
+                    "PIS": {
+                        "PISAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pPIS": "1.6500",
+                            "vPIS": "39.58"
+                        }
+                    },
+                    "COFINS": {
+                        "COFINSAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pCOFINS": "7.6000",
+                            "vCOFINS": "182.32"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "conclusao_analise": "Auditoria concluída com sucesso. Nenhuma inconsistência fiscal foi encontrada e todos os dados parecem estar em conformidade.",
+        "tipo_documento": "NFE",
+        "numero": "161841",
+        "data_emissao": "2025-07-02T18:05:46-03:00",
+        "emitente_razao_social": "TELEFONICA BRASIL S/A",
+        "emitente_cnpj": "02558157046154",
+        "destinatario_razao_social": "HENRIQUE BAPTISTA MARTINS",
+        "destinatario_cnpj_cpf": "44769182805",
+        "valor_total_nota": "2399.00",
+        "itens": [
+            {
+                "codigo": "000000000022022058",
+                "descricao": "APPLE AIRPODS PRO2 C/ESTJ MGSAFE USBC BR",
+                "ncm": "85183000",
+                "cfop": "6102",
+                "valor_total": "2399.00",
+                "imposto": {
+                    "vTotTrib": "221.90",
+                    "ICMS": {
+                        "ICMS40": {
+                            "orig": "2",
+                            "CST": "41"
+                        }
+                    },
+                    "IPI": {
+                        "cEnq": "999",
+                        "IPINT": {
+                            "CST": "01"
+                        }
+                    },
+                    "PIS": {
+                        "PISAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pPIS": "1.6500",
+                            "vPIS": "39.58"
+                        }
+                    },
+                    "COFINS": {
+                        "COFINSAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pCOFINS": "7.6000",
+                            "vCOFINS": "182.32"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "conclusao_analise": "Auditoria concluída com sucesso. Nenhuma inconsistência fiscal foi encontrada e todos os dados parecem estar em conformidade.",
+        "tipo_documento": "NFE",
+        "numero": "161841",
+        "data_emissao": "2025-07-02T18:05:46-03:00",
+        "emitente_razao_social": "TELEFONICA BRASIL S/A",
+        "emitente_cnpj": "02558157046154",
+        "destinatario_razao_social": "HENRIQUE BAPTISTA MARTINS",
+        "destinatario_cnpj_cpf": "44769182805",
+        "valor_total_nota": "2399.00",
+        "itens": [
+            {
+                "codigo": "000000000022022058",
+                "descricao": "APPLE AIRPODS PRO2 C/ESTJ MGSAFE USBC BR",
+                "ncm": "85183000",
+                "cfop": "6102",
+                "valor_total": "2399.00",
+                "imposto": {
+                    "vTotTrib": "221.90",
+                    "ICMS": {
+                        "ICMS40": {
+                            "orig": "2",
+                            "CST": "41"
+                        }
+                    },
+                    "IPI": {
+                        "cEnq": "999",
+                        "IPINT": {
+                            "CST": "01"
+                        }
+                    },
+                    "PIS": {
+                        "PISAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pPIS": "1.6500",
+                            "vPIS": "39.58"
+                        }
+                    },
+                    "COFINS": {
+                        "COFINSAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pCOFINS": "7.6000",
+                            "vCOFINS": "182.32"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "status_auditoria": "error",
+        "erros_auditoria": [
+            "CNPJ do emitente '00111222000199' é inválido ou não informado.",
+            "A soma dos itens (14205.00) difere do valor total da nota (14000.00)."
+        ],
+        "avisos_auditoria": [],
+        "conclusao_analise": "A auditoria do documento fiscal identificou dois erros principais que precisam ser corrigidos:\n\n1. **Validação do CNPJ**: O CNPJ do emitente '00111222000199' apresentou-se como inválido ou não foi informado corretamente. É necessário verificar e corrigir o CNPJ para garantir que esteja correto e válido.\n\n2. **Discrepância nos Valores**: Há uma inconsistência entre a soma dos itens da nota fiscal, que totaliza R$ 14.205,00, e o valor total declarado na nota, que é de R$ 14.000,00. É essencial revisar e ajustar os valores para que a soma dos itens corresponda ao valor total informado na nota fiscal.\n\nPor favor, faça as correções necessárias para evitar problemas fiscais ou rejeições futuras da nota fiscal.",
+        "tipo_documento": "NFE",
+        "numero": "15048",
+        "data_emissao": "2025-10-28T10:30:00-03:00",
+        "emitente_razao_social": "EMPRESA EMITENTE TESTE LTDA",
+        "emitente_cnpj": "00111222000199",
+        "destinatario_razao_social": "EMPRESA DESTINATARIO TESTE S/A",
+        "destinatario_cnpj_cpf": "99888777000111",
+        "valor_total_nota": "14000.00",
+        "itens": [
+            {
+                "codigo": "001",
+                "descricao": "NOTEBOOK MODELO PRO",
+                "ncm": "84713019",
+                "cfop": "5102",
+                "valor_total": "9000.00",
+                "imposto": {
+                    "ICMS": {
+                        "ICMS00": {
+                            "orig": "0",
+                            "CST": "00",
+                            "modBC": "3",
+                            "vBC": "9000.00",
+                            "pICMS": "18.00",
+                            "vICMS": "1620.00"
+                        }
+                    }
+                }
+            },
+            {
+                "codigo": "002",
+                "descricao": "MONITOR 24 POLEGADAS",
+                "ncm": "85285200",
+                "cfop": "5102",
+                "valor_total": "4000.00",
+                "imposto": {
+                    "ICMS": {
+                        "ICMS00": {
+                            "orig": "0",
+                            "CST": "00",
+                            "modBC": "3",
+                            "vBC": "4000.00",
+                            "pICMS": "18.00",
+                            "vICMS": "720.00"
+                        }
+                    }
+                }
+            },
+            {
+                "codigo": "003",
+                "descricao": "SUPORTE NOTEBOOK",
+                "ncm": "84733090",
+                "cfop": "5102",
+                "valor_total": "1205.00",
+                "imposto": {
+                    "ICMS": {
+                        "ICMS00": {
+                            "orig": "0",
+                            "CST": "00",
+                            "modBC": "3",
+                            "vBC": "1205.00",
+                            "pICMS": "18.00",
+                            "vICMS": "216.90"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "conclusao_analise": "Auditoria concluída com sucesso. Nenhuma inconsistência fiscal foi encontrada e todos os dados parecem estar em conformidade.",
+        "tipo_documento": "NFE",
+        "numero": "161841",
+        "data_emissao": "2025-07-02T18:05:46-03:00",
+        "emitente_razao_social": "TELEFONICA BRASIL S/A",
+        "emitente_cnpj": "02558157046154",
+        "destinatario_razao_social": "HENRIQUE BAPTISTA MARTINS",
+        "destinatario_cnpj_cpf": "44769182805",
+        "valor_total_nota": "2399.00",
+        "itens": [
+            {
+                "codigo": "000000000022022058",
+                "descricao": "APPLE AIRPODS PRO2 C/ESTJ MGSAFE USBC BR",
+                "ncm": "85183000",
+                "cfop": "6102",
+                "valor_total": "2399.00",
+                "imposto": {
+                    "vTotTrib": "221.90",
+                    "ICMS": {
+                        "ICMS40": {
+                            "orig": "2",
+                            "CST": "41"
+                        }
+                    },
+                    "IPI": {
+                        "cEnq": "999",
+                        "IPINT": {
+                            "CST": "01"
+                        }
+                    },
+                    "PIS": {
+                        "PISAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pPIS": "1.6500",
+                            "vPIS": "39.58"
+                        }
+                    },
+                    "COFINS": {
+                        "COFINSAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pCOFINS": "7.6000",
+                            "vCOFINS": "182.32"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "conclusao_analise": "Auditoria concluída com sucesso. Nenhuma inconsistência fiscal foi encontrada e todos os dados parecem estar em conformidade.",
+        "numero": "75763",
+        "data_emissao": "10/10/2024",
+        "valor_total_nota": "2.081,27",
+        "discriminacao_servicos": "9.01 - Hospedagem de qualquer natureza em hotéis, apart - service condominiais, flat, apart - hotéis, hotéis residência, residence - service, suite service, hotelaria marítima, motéis, pensões e congêneres; ocupação por temporada com fornecimento de serviço.",
+        "emitente_cnpj": "22.646.741/0001-87",
+        "destinatario_cnpj_cpf": "447.691.828-05",
+        "formato": "ocr_ia",
+        "tipo_documento": "NFS-e"
+    },
+    {
+        "status_auditoria": "error",
+        "erros_auditoria": [
+            "CNPJ do emitente '00111222000199' é inválido ou não informado."
+        ],
+        "avisos_auditoria": [],
+        "conclusao_analise": "A auditoria identificou um problema crítico no documento fiscal analisado: o CNPJ do emitente '00111222000199' é inválido ou não foi informado corretamente. É essencial verificar e corrigir o CNPJ do emitente para garantir a validade e a conformidade do documento fiscal. Não foram emitidos outros avisos.",
+        "tipo_documento": "NFE",
+        "numero": "15049",
+        "data_emissao": "2025-10-28T11:00:00-03:00",
+        "emitente_razao_social": "EMPRESA EMITENTE TESTE LTDA",
+        "emitente_cnpj": "00111222000199",
+        "destinatario_razao_social": "EMPRESA DESTINATARIO TESTE S/A",
+        "destinatario_cnpj_cpf": "99888777000111",
+        "valor_total_nota": "14705.00",
+        "itens": [
+            {
+                "codigo": "001",
+                "descricao": "NOTEBOOK MODELO PRO",
+                "ncm": "84713019",
+                "cfop": "5102",
+                "valor_total": "9000.00",
+                "imposto": {
+                    "ICMS": {
+                        "ICMS00": {
+                            "orig": "0",
+                            "CST": "00",
+                            "modBC": "3",
+                            "vBC": "9000.00",
+                            "pICMS": "18.00",
+                            "vICMS": "1620.00"
+                        }
+                    }
+                }
+            },
+            {
+                "codigo": "002",
+                "descricao": "MONITOR 24 POLEGADAS",
+                "ncm": "85285200",
+                "cfop": "5102",
+                "valor_total": "4500.00",
+                "imposto": {
+                    "ICMS": {
+                        "ICMS00": {
+                            "orig": "0",
+                            "CST": "00",
+                            "modBC": "3",
+                            "vBC": "4500.00",
+                            "pICMS": "18.00",
+                            "vICMS": "810.00"
+                        }
+                    }
+                }
+            },
+            {
+                "codigo": "003",
+                "descricao": "SUPORTE NOTEBOOK",
+                "ncm": "84733090",
+                "cfop": "5102",
+                "valor_total": "1205.00",
+                "imposto": {
+                    "ICMS": {
+                        "ICMS00": {
+                            "orig": "0",
+                            "CST": "00",
+                            "modBC": "3",
+                            "vBC": "1205.00",
+                            "pICMS": "18.00",
+                            "vICMS": "216.90"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "status_auditoria": "success",
+        "erros_auditoria": [],
+        "avisos_auditoria": [],
+        "conclusao_analise": "Auditoria concluída com sucesso. Nenhuma inconsistência fiscal foi encontrada e todos os dados parecem estar em conformidade.",
+        "tipo_documento": "NFE",
+        "numero": "161841",
+        "data_emissao": "2025-07-02T18:05:46-03:00",
+        "emitente_razao_social": "TELEFONICA BRASIL S/A",
+        "emitente_cnpj": "02558157046154",
+        "destinatario_razao_social": "HENRIQUE BAPTISTA MARTINS",
+        "destinatario_cnpj_cpf": "44769182805",
+        "valor_total_nota": "2399.00",
+        "itens": [
+            {
+                "codigo": "000000000022022058",
+                "descricao": "APPLE AIRPODS PRO2 C/ESTJ MGSAFE USBC BR",
+                "ncm": "85183000",
+                "cfop": "6102",
+                "valor_total": "2399.00",
+                "imposto": {
+                    "vTotTrib": "221.90",
+                    "ICMS": {
+                        "ICMS40": {
+                            "orig": "2",
+                            "CST": "41"
+                        }
+                    },
+                    "IPI": {
+                        "cEnq": "999",
+                        "IPINT": {
+                            "CST": "01"
+                        }
+                    },
+                    "PIS": {
+                        "PISAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pPIS": "1.6500",
+                            "vPIS": "39.58"
+                        }
+                    },
+                    "COFINS": {
+                        "COFINSAliq": {
+                            "CST": "01",
+                            "vBC": "2399.00",
+                            "pCOFINS": "7.6000",
+                            "vCOFINS": "182.32"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "status_auditoria": "error",
+        "erros_auditoria": [
+            "CNPJ do emitente '00111222000199' é inválido ou não informado.",
+            "A soma dos itens (14205.00) difere do valor total da nota (14000.00)."
+        ],
+        "avisos_auditoria": [],
+        "conclusao_analise": "A auditoria do documento fiscal identificou dois erros críticos que precisam ser corrigidos:\n\n1. O CNPJ do emitente '00111222000199' está inválido ou não foi informado corretamente. É necessário verificar e corrigir o CNPJ para garantir que esteja correto e válido.\n\n2. Há uma discrepância entre a soma dos valores dos itens e o valor total da nota fiscal. Os itens somam R$ 14.205,00, enquanto o valor total da nota está registrado como R$ 14.000,00. É necessário revisar e ajustar esses valores para que ambos correspondam.\n\nNão há avisos emitidos, então o foco deve estar na correção desses erros para evitar problemas fiscais ou rejeições em processos de auditoria futuros.",
+        "tipo_documento": "NFE",
+        "numero": "15048",
+        "data_emissao": "2025-10-28T10:30:00-03:00",
+        "emitente_razao_social": "EMPRESA EMITENTE TESTE LTDA",
+        "emitente_cnpj": "00111222000199",
+        "destinatario_razao_social": "EMPRESA DESTINATARIO TESTE S/A",
+        "destinatario_cnpj_cpf": "99888777000111",
+        "valor_total_nota": "14000.00",
+        "itens": [
+            {
+                "codigo": "001",
+                "descricao": "NOTEBOOK MODELO PRO",
+                "ncm": "84713019",
+                "cfop": "5102",
+                "valor_total": "9000.00",
+                "imposto": {
+                    "ICMS": {
+                        "ICMS00": {
+                            "orig": "0",
+                            "CST": "00",
+                            "modBC": "3",
+                            "vBC": "9000.00",
+                            "pICMS": "18.00",
+                            "vICMS": "1620.00"
+                        }
+                    }
+                }
+            },
+            {
+                "codigo": "002",
+                "descricao": "MONITOR 24 POLEGADAS",
+                "ncm": "85285200",
+                "cfop": "5102",
+                "valor_total": "4000.00",
+                "imposto": {
+                    "ICMS": {
+                        "ICMS00": {
+                            "orig": "0",
+                            "CST": "00",
+                            "modBC": "3",
+                            "vBC": "4000.00",
+                            "pICMS": "18.00",
+                            "vICMS": "720.00"
+                        }
+                    }
+                }
+            },
+            {
+                "codigo": "003",
+                "descricao": "SUPORTE NOTEBOOK",
+                "ncm": "84733090",
+                "cfop": "5102",
+                "valor_total": "1205.00",
+                "imposto": {
+                    "ICMS": {
+                        "ICMS00": {
+                            "orig": "0",
+                            "CST": "00",
+                            "modBC": "3",
+                            "vBC": "1205.00",
+                            "pICMS": "18.00",
+                            "vICMS": "216.90"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+]
