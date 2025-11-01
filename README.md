@@ -45,7 +45,7 @@ Siga os passos abaixo para configurar e executar o projeto em seu ambiente local
 
 **Passo 1: Clonar o Repositório**
 ```bash
-git clone C:\Users\henri\Documents\GitHub\Agente-Fiscal.git
+git clone https://github.com/backhenry/Agente-Fiscal
 cd Agente-Fiscal
 ```
 
