@@ -109,3 +109,6 @@ Agente-Fiscal/
 ```
 ## 7. Licença 📜
 Este projeto é de código aberto (open source) e está licenciado sob a Licença MIT. Sinta-se à vontade para usar, modificar e distribuir o código conforme os termos desta licença.
+
+## 8. Funcionamento
+![Demo do Projeto](funcionamento.gif)
