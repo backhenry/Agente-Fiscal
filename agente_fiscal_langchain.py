@@ -138,7 +138,7 @@ def auditar_e_salvar_dados_fiscais(dados_json: str) -> str:
                         f"Alíquota IPI: {resultado_ncm['aliquota']}%"
                     )
                     try:
-                        pIPI_doc_str = item.get('imposto', {}).get('IPI', {}).get('IPITrib', {}).get('pIPI')
+                        pIPI_doc_str = item.get('pIPI') # Modificado para o novo formato simplificado
                         if pIPI_doc_str is not None:
                             pIPI_doc = _to_decimal(pIPI_doc_str)
                             pIPI_tipi = _to_decimal(resultado_ncm.get('aliquota', '0'))
@@ -232,7 +232,9 @@ def extrair_dados_xml(caminho_arquivo: str) -> str:
         ns = {'doc': root.nsmap.get(None)}
         def get_text(element, path): 
             node = element.find(path, ns) if element is not None else None
-            return node.text if node is not None else None
+            if node is not None and node.text is not None:
+                return node.text.strip()
+            return None
 
         ide_node = doc.find('.//doc:ide', ns)
         emit_node = doc.find('.//doc:emit', ns)
@@ -258,7 +260,8 @@ def extrair_dados_xml(caminho_arquivo: str) -> str:
                 "codigo": get_text(prod_node, 'doc:cProd'), "descricao": get_text(prod_node, 'doc:xProd'),
                 "ncm": get_text(prod_node, 'doc:NCM'), "cfop": get_text(prod_node, 'doc:CFOP'),
                 "valor_total": get_text(prod_node, 'doc:vProd'),
-                "imposto": element_to_dict(imposto_node).get('imposto', {}) if imposto_node is not None else {}
+                # Extrai apenas o pIPI, que é o único campo usado na auditoria
+                "pIPI": get_text(imposto_node, './/doc:IPITrib/doc:pIPI')
             }
             dados["itens"].append(item)
 
